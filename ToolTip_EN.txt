@@ -1,0 +1,16 @@
+Tooltip_EN = {
+	Tooltip_SurvivalBracelet = "This is a Survival bracelet, made from twine. It can be unraveled to get some twine, paperclips, and a set of matches.",
+	Tooltip_SurvivalBracelet9mm = "This is a Survival bracelet, made from twine. It can be unraveled to get some twine, paperclips, and a set of matches. This one has a live 9x19mm round tied to it as a charm. Maybe it's good luck?",
+	Tooltip_SurvivalBracelet45acp = "This is a Survival bracelet, made from twine. It can be unraveled to get some twine, paperclips, and a set of matches. This one has a live .45 ACP round tied to it as a charm. Maybe it's good luck?",
+	Tooltip_SurvivalBracelet38spc = "This is a Survival bracelet, made from twine. It can be unraveled to get some twine, paperclips, and a set of matches. This one has a live .38 Special round tied to it as a charm. Maybe it's good luck?",
+	Tooltip_SurvivalBracelet44mag = "This is a Survival bracelet, made from twine. It can be unraveled to get some twine, paperclips, and a set of matches. This one has a live .44 Magnum round tied to it as a charm. Maybe it's good luck?",
+	Tooltip_SurvivalBracelet12ga = "This is a Survival bracelet, made from twine. It can be unraveled to get some twine, paperclips, and a set of matches. This one has a live 12 Ga. shotgun shell tied to it as a charm. Maybe it's good luck?",
+	Tooltip_SurvivalBraceletFish = "This is a Survival bracelet, made from twine, for fishing. It can be unraveled to get some fishing supplies.",
+	Tooltip_SurvivalBraceletTrap = "This is a Survival bracelet, made from twine, for trapping. It can be unraveled to get some trapping supplies.",
+	Tooltip_SurvivalBraceletMed = "This is a Survival bracelet, made from twine, for first aid. It can be unraveled to get some medical supplies.",
+	Tooltip_SurvivalBraceletElec = "This is a Survival bracelet, made from twine, for electrical work. It can be unraveled to get some electrical supplies.",
+	Tooltip_SurvivalBraceletTailor = "This is a Survival bracelet, made from twine, for tailoring work. It can be unraveled to get some tailoring supplies.",
+	Tooltip_SurvivalWatch = "This is a modified digital watch, that has useful supplies woven into the band. It can be unraveled to get some survival supplies.",
+	Tooltip_SurvivalWatchDean = "This is Dean's modified digital watch, that has useful supplies woven into the band. It can be unraveled to get plenty of survival supplies.",
+	Tooltip_EXAMPLE = "This is an example tooltip for the example charm."
+}

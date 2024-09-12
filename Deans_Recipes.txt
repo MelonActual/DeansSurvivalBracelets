@@ -1,0 +1,1012 @@
+module Base {
+
+recipe Convert Twine into Bracelet
+  	{
+   	   destroy Twine=2,
+	   
+	   SkillRequired:PlantScavenging=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightFriendshipTINT,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   
+  	}
+recipe Convert Ripped Sheets into Bracelet
+  	{
+   	   destroy RippedSheets=20,
+	   
+	   SkillRequired:PlantScavenging=1,
+	   SkillRequired:Tailoring=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightFriendshipTINT,
+	   Time:240.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+  	}	
+recipe Convert Bracelet into Twine   
+  	{
+   	   destroy Bracelet_RightFriendshipTINT/Base.Bracelet_LeftFriendshipTINT,
+	   
+	   Category:PlantScavenging,
+   	   Result:Twine=2,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+  	}
+	recipe Convert Bracelet into Survival Bracelet
+  	{
+   	   destroy Bracelet_RightFriendshipTINT/Bracelet_LeftFriendshipTINT,
+	   destroy RippedSheets,
+	   destroy Paperclip=2,
+	   destroy Matches,
+	   destroy Thread,
+	   Keep Needle,
+
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalTINT,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   
+  	}
+		recipe Add 9x19mm Charm to Survival Bracelet
+  	{
+   	   destroy Bracelet_RightSurvivalTINT/Bracelet_LeftSurvivalTINT,
+	   destroy Twine,
+	   destroy Bullets9mm,
+
+
+	   SkillRequired:Tailoring=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalTINT9mm,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   
+  	}
+	recipe Remove Charm   
+  	{
+   	   destroy Bracelet_RightSurvivalTINT9mm/Bracelet_RightSurvivalTINT9mm,
+	   
+	   Category:PlantScavenging,
+   	   Result:Bullets9mm,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Remove_Charm,
+	   AnimNode:RipSheets,
+  	}
+	recipe Add .45 ACP Charm to Survival Bracelet
+  	{
+   	   destroy Bracelet_RightSurvivalTINT/Bracelet_LeftSurvivalTINT,
+	   destroy Twine,
+	   destroy Bullets45,
+
+
+	   SkillRequired:Tailoring=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalTINT45acp,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   
+  	}
+	recipe Remove Charm   
+  	{
+   	   destroy Bracelet_RightSurvivalTINT45acp/Bracelet_RightSurvivalTINT45acp,
+	   
+   	   Result:Bullets45,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Remove_Charm,
+	   AnimNode:RipSheets,
+  	}
+	recipe Add .38 SPC Charm to Survival Bracelet
+  	{
+   	   destroy Bracelet_RightSurvivalTINT/Bracelet_LeftSurvivalTINT,
+	   destroy Twine,
+	   destroy Bullets38,
+
+
+	   SkillRequired:Tailoring=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalTINT38spc,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   
+  	}
+	recipe Remove Charm   
+  	{
+   	   destroy Bracelet_RightSurvivalTINT38spc/Bracelet_RightSurvivalTINT38spc,
+	   
+	   Category:PlantScavenging,
+   	   Result:Bullets38,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Remove_Charm,
+	   AnimNode:RipSheets,
+  	}
+	recipe Add .44 MAG Charm to Survival Bracelet
+  	{
+   	   destroy Bracelet_RightSurvivalTINT/Bracelet_LeftSurvivalTINT,
+	   destroy Twine,
+	   destroy Bullets44,
+
+
+	   SkillRequired:Tailoring=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalTINT44mag,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   
+  	}
+	recipe Remove Charm   
+  	{
+   	   destroy Bracelet_RightSurvivalTINT44mag/Bracelet_RightSurvivalTINT44mag,
+	   
+	   Category:PlantScavenging,
+   	   Result:Bullets44,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Remove_Charm,
+	   AnimNode:RipSheets,
+  	}
+	recipe Add 12 Ga. Charm to Survival Bracelet
+  	{
+   	   destroy Bracelet_RightSurvivalTINT/Bracelet_LeftSurvivalTINT,
+	   destroy Twine,
+	   destroy ShotgunShells,
+
+	   SkillRequired:Tailoring=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalTINT12ga,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   
+  	}
+	recipe Remove Charm   
+  	{
+   	   destroy Bracelet_RightSurvivalTINT12ga/Bracelet_RightSurvivalTINT12ga,
+	   
+	   Category:PlantScavenging,
+   	   Result:ShotgunShells,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Remove_Charm,
+	   AnimNode:RipSheets,
+  	}
+recipe Unwrap Survival Bracelet   
+  	{
+   	   destroy Bracelet_RightSurvivalTINT/Bracelet_RightSurvivalTINT,
+	   
+	   Category:PlantScavenging,
+   	   Result:Paperclip=2,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_SurvivalBracelet,
+	   AnimNode:RipSheets,
+  	}
+recipe Weave Survival Fishing Bracelet
+  	{
+   	   destroy Twine=2,
+	   destroy Wire==5,
+	   destroy FishingLine=10,
+	   destroy RippedSheets,
+	   destroy Thread,
+	   destroy FishingTackle/FishingTackle2=2,
+	   destroy Paperclip=2,
+	   Keep Needle,
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:Fishing=2,
+	   SkillRequired:PlantScavenging=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalFishingTINT,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   
+  	}
+recipe Unwrap Survival Fishing Bracelet   
+  	{
+   	   destroy Bracelet_RightSurvivalFishingTINT/Bracelet_RightSurvivalFishingTINT,
+	   
+   	   Result:Paperclip=2,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_FishingSurvivalBracelet,
+	   AnimNode:RipSheets,
+  	}	
+recipe Weave Survival Trapping Bracelet
+  	{
+   	   destroy Twine=4,
+	   destroy Wire==5,
+	   destroy RippedSheets,
+	   destroy Nails=20,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:Trapping=2,
+	   SkillRequired:PlantScavenging=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalTrappingTINT,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   
+  	}
+recipe Unwrap Survival Trapping Bracelet   
+  	{
+   	   destroy Bracelet_RightSurvivalTrappingTINT/Bracelet_RightSurvivalTrappingTINT,
+	   
+	   Category:PlantScavenging,
+   	   Result:Nails=20,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_TrappingSurvivalBracelet,
+	   AnimNode:RipSheets,
+  	}	
+recipe Weave Survival Medical Bracelet
+  	{
+   	   destroy Twine=2,
+	   destroy AlcoholedCottonBalls,
+	   destroy Bandaid=3,
+	   destroy Tweezers,
+	   destroy SutureNeedle,
+	   destroy RippedSheets,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:FirstAid=1,
+	   SkillRequired:PlantScavenging=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalMedicalTINT,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   
+  	}
+recipe Unwrap Survival Medical Bracelet   
+  	{
+   	   destroy Bracelet_RightSurvivalMedicalTINT/Bracelet_RightSurvivalMedicalTINT,
+	   
+	   Category:PlantScavenging,
+   	   Result:Bandaid=3,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_MedicalSurvivalBracelet,
+	   AnimNode:RipSheets,
+  	}
+recipe Weave Survival Electrical Bracelet
+  	{
+   	   destroy Twine=2,
+	   destroy ElectronicsScrap=10,
+	   destroy ElectricWire=10,
+	   destroy Battery=2,
+	   destroy Aluminum,
+	   destroy RippedSheets,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:Electrical=1,
+	   SkillRequired:PlantScavenging=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalElectricalTINT,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   
+  	}
+recipe Unwrap Survival Electrical Bracelet   
+  	{
+   	   destroy Bracelet_RightSurvivalElectricalTINT/Bracelet_RightSurvivalElectricalTINT,
+	   
+	   Category:PlantScavenging,
+   	   Result:ElectronicsScrap=10,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_ElectricalSurvivalBracelet,
+	   AnimNode:RipSheets,
+  	}	
+recipe Weave Survival Tailoring Bracelet
+  	{
+   	   destroy Twine=2,
+	   destroy Needle,
+	   destroy RippedSheets,
+	   destroy Thread=21,
+	   Keep Needle,
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalTailoringTINT,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   
+  	}
+recipe Unwrap Survival Tailoring Bracelet   
+  	{
+   	   destroy Bracelet_RightSurvivalTailoringTINT/Bracelet_RightSurvivalTailoringTINT,
+	   
+	   Category:PlantScavenging,
+   	   Result:Thread=20,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_TailoringSurvivalBracelet,
+	   AnimNode:RipSheets,
+  	}
+recipe Make Red Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalRed/WristWatch_Left_DigitalRed,
+	   destroy Twine=3,
+	   destroy Matches,
+	   destroy RippedSheets,
+	   destroy Paperclip=5,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalRedSurvival,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Red Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalRedSurvival/WristWatch_Right_DigitalRedSurvival,
+	   
+	   	   
+
+	   Category:PlantScavenging,
+	   Result:Paperclip=5,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_RedWatch,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+
+recipe Make Red Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalRed/WristWatch_Left_DigitalRed,
+	   destroy Twine=3,
+	   destroy RippedSheets,
+	   destroy Matches,
+	   destroy Nails=5,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalRedSurvivalNail,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Red Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalRedSurvivalNail/WristWatch_Right_DigitalRedSurvivalNail,
+	   
+	   
+
+	   Category:PlantScavenging,
+	   Result:Nails=5,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_RedWatch,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Red Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalRedOra/WristWatch_Left_DigitalRedOra,
+	   destroy Twine=3,
+	   destroy RippedSheets,
+	   destroy FishingTackle2=2,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=2,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalRedSurvivalFish,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Red Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalRedSurvivalFishOra/WristWatch_Right_DigitalRedSurvivalFishOra,
+	   
+	   
+	   Category:PlantScavenging,
+	   Result:FishingTackle2=2,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_RedWatch,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Red Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalRed/WristWatch_Left_DigitalRed,
+	   destroy Twine=3,
+	   destroy RippedSheets,
+	   destroy FishingTackle=2,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=2,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalRedSurvivalFish,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Red Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalRedSurvivalFish/WristWatch_Right_DigitalRedSurvivalFish,   
+	   
+
+	   Category:PlantScavenging,
+	   Result:FishingTackle=2,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_RedWatch,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Red Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalRed/WristWatch_Left_DigitalRed,
+	   destroy FishingLine=20,
+	   destroy RippedSheets,
+	   destroy FishingTackle=2,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=3,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalRedSurvivalFishLine,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Red Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalRedSurvivalFishLine/WristWatch_Right_DigitalRedSurvivalFishLine,   
+
+	   Category:PlantScavenging,
+	   Result:FishingTackle=2,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_RedWatchLine,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Red Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalRed/WristWatch_Left_DigitalRed,
+	   destroy FishingLine=20,
+	   destroy RippedSheets,
+	   destroy FishingTackle2=2,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=3,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalRedSurvivalFishLineOra,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Red Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalRedSurvivalFishLineOra/WristWatch_Right_DigitalRedSurvivalFishLineOra,  
+	   
+	   
+
+	   Category:PlantScavenging,
+	   Result:FishingTackle2=2,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_RedWatchLine,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Red Trapping Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalRed/WristWatch_Left_DigitalRed,
+	   destroy Twine=4,
+	   destroy Wire=15,
+	   destroy Nails=25,
+	   destroy RippedSheets,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Trapping=3, 
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalRedBushcraftFish,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Red Trapping Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalRedBushcraftFish/WristWatch_Right_DigitalRedBushcraftFish,  
+	   
+	   
+
+	   Category:PlantScavenging,
+	   Result:Nails=25,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_RedWatchTrapping,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+	
+recipe Make Bushcraft Angler's Red Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalRed/WristWatch_Left_DigitalRed,
+	   destroy Twine=4,
+	   destroy FishingLine=20,
+	   destroy Paperclip=10,
+	   destroy RippedSheets,
+	   destroy Needle,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=4,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalRedBushcraftFish,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Bushcraft Angler's Red Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalRedBushcraftFish/WristWatch_Right_DigitalRedBushcraftFish,  
+	   
+	   
+	   Category:PlantScavenging,
+	   Result:Paperclip=10,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_RedWatchFishing,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}	
+recipe Make Dean's Red Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalRed/WristWatch_Left_DigitalRed,
+	   destroy Twine=4,
+	   destroy FishingLine=20,
+	   destroy Wire=20,
+	   destroy Paperclip=10,
+	   destroy Lighter,
+	   destroy Matches,
+	   destroy Nails=10,
+	   destroy FishingTackle=5,
+	   destroy FishingTackle2=5,
+	   destroy RippedSheets=2,
+	   destroy Thread=2,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=2,
+	   SkillRequired:PlantScavenging=7,
+	   SkillRequired:Fishing=5,
+	   SkillRequired:Trapping=5,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalRedDean,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Dean's Red Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalRedDean/WristWatch_Right_DigitalRedDean,  
+	   
+	   
+	   Category:PlantScavenging,
+	   Result:Paperclip=10,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_RedWatchDean,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}	
+recipe Make Black Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalBlack/WristWatch_Left_DigitalBlack,
+	   destroy Twine=3,
+	   destroy Matches,
+	   destroy RippedSheets,
+	   destroy Paperclip=5,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalBlackSurvival,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Black Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalBlackSurvival/WristWatch_Right_DigitalBlackSurvival,  
+	   
+	   	   
+
+	   Category:PlantScavenging,
+	   Result:Paperclip=5,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_BlackWatch,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+
+recipe Make Black Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalBlack/WristWatch_Left_DigitalBlack,
+	   destroy Twine=3,
+	   destroy RippedSheets,
+	   destroy Matches,
+	   destroy Nails=5,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalBlackSurvivalNail,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Black Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalBlackSurvivalNail/WristWatch_Right_DigitalBlackSurvivalNail,  
+	   
+	   
+
+	   Category:PlantScavenging,
+	   Result:Nails=5,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_BlackWatch,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Black Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalBlackOra/WristWatch_Left_DigitalBlackOra,
+	   destroy Twine=3,
+	   destroy RippedSheets,
+	   destroy FishingTackle2=2,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=2,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalBlackSurvivalFish,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Black Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalBlackSurvivalFishOra/WristWatch_Right_DigitalBlackSurvivalFishOra,
+	   
+	   
+	   Category:PlantScavenging,
+	   Result:FishingTackle2=2,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_BlackWatch,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Black Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalBlack/WristWatch_Left_DigitalBlack,
+	   destroy Twine=3,
+	   destroy RippedSheets,
+	   destroy FishingTackle=2,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=2,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalBlackSurvivalFish,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Black Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalBlackSurvivalFish/WristWatch_Right_DigitalBlackSurvivalFish,  
+	   
+	   
+
+	   Category:PlantScavenging,
+	   Result:FishingTackle=2,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_BlackWatch,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Black Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalBlack/WristWatch_Left_DigitalBlack,
+	   destroy FishingLine=20,
+	   destroy RippedSheets,
+	   destroy FishingTackle=2,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=3,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalBlackSurvivalFishLine,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Black Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalBlackSurvivalFishLine/WristWatch_Right_DigitalBlackSurvivalFishLine,  
+	   
+	   
+
+	   Category:PlantScavenging,
+	   Result:FishingTackle=2,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_BlackWatchLine,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Black Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalBlack/WristWatch_Left_DigitalBlack,
+	   destroy FishingLine=20,
+	   destroy RippedSheets,
+	   destroy FishingTackle2=2,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=3,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalBlackSurvivalFishLineOra,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Black Fishing Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalBlackSurvivalFishLineOra/WristWatch_Right_DigitalBlackSurvivalFishLineOra,  
+	   
+	   
+
+	   Category:PlantScavenging,
+	   Result:FishingTackle2=2,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_BlackWatchLine,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Make Black Trapping Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalBlack/WristWatch_Left_DigitalBlack,
+	   destroy Twine=4,
+	   destroy Wire=15,
+	   destroy Nails=25,
+	   destroy RippedSheets,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Trapping=3, 
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalBlackBushcraftFish,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Black Trapping Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalBlackBushcraftFish/WristWatch_Right_DigitalBlackBushcraftFish,  
+	   
+	   
+
+	   Category:PlantScavenging,
+	   Result:Nails=25,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_BlackWatchTrapping,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+	
+recipe Make Bushcraft Angler's Black Survival Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalBlack/WristWatch_Left_DigitalBlack,
+	   destroy Twine=4,
+	   destroy FishingLine=20,
+	   destroy Paperclip=10,
+	   destroy RippedSheets,
+	   destroy Needle,
+	   destroy Thread,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=1,
+	   SkillRequired:PlantScavenging=2,
+	   SkillRequired:Fishing=4,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalBlackBushcraftFish,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Bushcraft Angler's Black Survival Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalBlackBushcraftFish/WristWatch_Right_DigitalBlackBushcraftFish,  
+	   
+	   
+	   Category:PlantScavenging,
+	   Result:Paperclip=10,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_BlackWatchFishing,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}	
+recipe Make Dean's Black Watch   
+  	{
+   	   destroy WristWatch_Right_DigitalBlack/WristWatch_Left_DigitalBlack,
+	   destroy Twine=4,
+	   destroy FishingLine=20,
+	   destroy Wire=20,
+	   destroy Paperclip=10,
+	   destroy Lighter,
+	   destroy Matches,
+	   destroy Nails=10,
+	   destroy FishingTackle=5,
+	   destroy FishingTackle2=5,
+	   destroy RippedSheets=2,
+	   destroy Thread=2,
+	   Keep Needle,
+	   
+	   
+	   SkillRequired:Tailoring=2,
+	   SkillRequired:PlantScavenging=7,
+	   SkillRequired:Fishing=5,
+	   SkillRequired:Trapping=5,
+	   Category:PlantScavenging,
+	   Result: WristWatch_Left_DigitalBlackDean,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+recipe Unwrap Dean's Black Watch   
+  	{
+   	   destroy WristWatch_Left_DigitalBlackDean/WristWatch_Right_DigitalBlackDean,  
+	   
+	   
+	   Category:PlantScavenging,
+	   Result:Paperclip=10,
+	   Time:60.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   OnCreate:Recipe.OnCreate.recipe_Unwrap_BlackWatchDean,
+	   Sound:ClothesRipping,
+	   AnimNode:RipSheets,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+  	}
+	
+ /* Modders! Melon here! Below you'll find some blank templates to add any patches(Brita,B42 Firearms, Etc) you wish to make your own bullet charms. Or do something else! Make brick toys! I didn't want to cause it really didn't fit, but feel free to turn this into a framework!  This is the framework for how the item is added to, and removed from the bracelets. Each "Charm" item you make is actually it's own bracelet. So for every item you want to add as a charm, you'll need to make your own new bracelet item, as the old object is combined with a bullet to make a new object. Note that to break it down, you have to call OnCreate. That is important! There are more examples in the items text file, and the lua file on how to make your own, and if you're reading this, you're curious, so get to modding! */
+
+/*
+
+	recipe Add EXAMPLE Charm to Survival Bracelet
+  	{
+   	   destroy Bracelet_RightSurvivalTINT/Bracelet_LeftSurvivalTINT,
+	   destroy Twine,
+	   destroy EXAMPLE,
+
+
+	   SkillRequired:Tailoring=1,
+	   Category:PlantScavenging,
+   	   Result:Bracelet_RightSurvivalTINTEXAMPLE,
+	   Time:180.0,
+	   Sound:PutItemInBag,
+	   AnimNode:RipSheets,
+	   
+  	}
+	recipe Remove Charm   
+  	{
+   	   destroy Bracelet_RightSurvivalTINTEXAMPLE/Bracelet_RightSurvivalTINT3EXAMPLE,
+	   
+   	   Result:EXAMPLE,
+	   Time:180.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:ClothesRipping,
+	   OnCreate:Recipe.OnCreate.recipe_Remove_Charm,
+	   AnimNode:RipSheets,
+  	}
+	
+	
+	
+	
+	*/
+}		
+
+
